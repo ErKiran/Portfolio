@@ -2,12 +2,15 @@ import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import ProjectCard from "./ProjectCards";
 import Particle from "../Particle";
-import leaf from "../../Assets/Projects/leaf.png";
-import emotion from "../../Assets/Projects/emotion.png";
-import editor from "../../Assets/Projects/codeEditor.png";
-import chatify from "../../Assets/Projects/chatify.png";
-import suicide from "../../Assets/Projects/suicide.png";
-import bitsOfCode from "../../Assets/Projects/blog.png";
+import RedditSimple from "../../Assets/Projects/reddit-simple.png"
+import MergeThemAll from "../../Assets/Projects/mergethemall.png"
+import PlantAI from "../../Assets/Projects/plant-disease.png"
+import NepalPolitical from "../../Assets/Projects/nepal-political.png"
+import NepalEPassport from  "../../Assets/Projects/epassport.png"
+import TVGuide from "../../Assets/Projects/tv-guide.png"
+import ElectionVis from "../../Assets/Projects/election.png"
+import Nepse from "../../Assets/Projects/stocks.png"
+import ManyMore from "../../Assets/Projects/manymore.png"
 
 function Projects() {
   return (
@@ -21,70 +24,99 @@ function Projects() {
           Here are a few projects I've worked on recently.
         </p>
         <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
-          <Col md={4} className="project-card">
+        <Col md={4} className="project-card">
             <ProjectCard
-              imgPath={chatify}
+              imgPath={TVGuide}
               isBlog={false}
-              title="Chatify"
-              description="Personal Chat Room or Workspace to share resources and hangout with friends build with react.js, Material-UI, and Firebase. Have features which allows user for realtime messaging, image sharing as well as supports reactions on messages."
-              ghLink="https://github.com/soumyajit4419/Chatify"
-              demoLink="https://chatify-49.web.app/"
+              title="TV Guide"
+              description="In a spare time I would love to binge watch. This small CLI app will update me what's on the TV and what's next on line whenever I feel to binge watch."
+              ghLink="https://github.com/ErKiran/tv-guide"
             />
           </Col>
 
           <Col md={4} className="project-card">
             <ProjectCard
-              imgPath={bitsOfCode}
+              imgPath={NepalEPassport}
               isBlog={false}
-              title="Bits-0f-C0de"
-              description="My personal blog page build with Next.js and Tailwind Css which takes the content from makdown files and renders it using Next.js. Supports dark mode and easy to write blogs using markdown."
-              ghLink="https://github.com/soumyajit4419/Bits-0f-C0de"
-              demoLink="https://blogs.soumya-jit.tech/"
+              title="E-passport Date Available"
+              description="Getting a appointment for a E-Passport in Nepal is quite a hassle. I create this simple CLI application to check if the date is avaibale or not. Inorder to check the date itself we need to fill the form with additional info. This will save alot of time. "
+              ghLink="https://github.com/ErKiran/nepal-e-passport-date"
             />
           </Col>
 
           <Col md={4} className="project-card">
             <ProjectCard
-              imgPath={editor}
+              imgPath={MergeThemAll}
               isBlog={false}
-              title="Editor.io"
-              description="Online code and markdown editor build with react.js. Online Editor which supports html, css, and js code with instant view of website. Online markdown editor for building README file which supports GFM, Custom Html tags with toolbar and instant preview.Both the editor supports auto save of work using Local Storage"
-              ghLink="https://github.com/soumyajit4419/Editor.io"
-              demoLink="https://editor.soumya-jit.tech/"              
+              title="MergeThemAll"
+              description="Merge all the pending PRs on the user repo. It uses github cli `gh` and merge the all mergeable PRs."
+              ghLink="https://github.com/ErKiran/MergeThemAll"
+              demoLink="https://github.com/ErKiran/MergeThemAll"
             />
           </Col>
 
           <Col md={4} className="project-card">
             <ProjectCard
-              imgPath={leaf}
+              imgPath={Nepse}
               isBlog={false}
-              title="Plant AI"
-              description="Used the plant disease dataset from Kaggle and trained a image classifer model using 'PyTorch' framework using CNN and Transfer Learning with 38 classes of various plant leaves. The model was successfully able to detect diseased and healthy leaves of 14 unique plants. I was able to achieve an accuracy of 98% by using Resnet34 pretrained model."
-              ghLink="https://github.com/soumyajit4419/Plant_AI"
-              demoLink="https://plant49-ai.herokuapp.com/"
+              title="Execelize Nepse"
+              description="Fundamental and Market Analysis of Nepali Stock Exchange Nepse with lot's of Excel files and HTML visualization to better understand the fundamental of the stocks and to understand the if the stocks are being pumped or dumped."
+              ghLink="https://github.com/ErKiran/execelizeNepse"
+              demoLink="https://www.youtube.com/watch?v=If3bPmdnk_8"
             />
           </Col>
 
           <Col md={4} className="project-card">
             <ProjectCard
-              imgPath={suicide}
+              imgPath={ElectionVis}
               isBlog={false}
-              title="Ai For Social Good"
-              description="Using 'Natural Launguage Processing' for the detection of suicide-related posts and user's suicide ideation in cyberspace  and thus helping in sucide prevention."
-              ghLink="https://github.com/soumyajit4419/AI_For_Social_Good"
-              // demoLink="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley" <--------Please include a demo link here
+              title="2074 & 2079 Election Data and Visualization"
+              description="Collected the Election Result data. Convert them in a programmable data format and create a visualization charts from Go Echarts"
+              ghLink="https://github.com/ErKiran/election-data-2074/tree/visualize"
+              demoLink="https://www.youtube.com/watch?v=dz2pCY8vCck"
             />
           </Col>
 
           <Col md={4} className="project-card">
             <ProjectCard
-              imgPath={emotion}
+              imgPath={NepalPolitical}
               isBlog={false}
-              title="Face Recognition and Emotion Detection"
-              description="Trained a CNN classifier using 'FER-2013 dataset' with Keras and tensorflow backened. The classifier sucessfully predicted the various types of emotions of human. And the highest accuracy obtained with the model was 60.1%.
-              Then used Open-CV to detect the face in an image and then pass the face to the classifer to predict the emotion of a person."
-              ghLink="https://github.com/soumyajit4419/Face_And_Emotion_Detection"
-              // demoLink="https://blogs.soumya-jit.tech/"      <--------Please include a demo link here 
+              title="Nepal Political"
+              description="A minimum npm package that contains the political division of Nepal. Handy package that contains ward level info of all local bodies (Municipality and Rural Municipality)"
+              ghLink="https://github.com/ErKiran/nepal_political"
+              demoLink="https://elegant-brown-f813c9.netlify.app/"
+            />
+          </Col>
+
+          <Col md={4} className="project-card">
+            <ProjectCard
+              imgPath={RedditSimple}
+              isBlog={false}
+              title="Reddit-Simple"
+              description="A dead simple wrapper over the Reddit API without any overhead of Authentication and Rate Limit as a NPM package"
+              ghLink="https://github.com/ErKiran/reddit-simple"
+              demoLink="https://www.npmjs.com/package/reddit-simple"
+            />
+          </Col>
+
+          <Col md={4} className="project-card">
+            <ProjectCard
+              imgPath={PlantAI}
+              isBlog={false}
+              title="Plant Disease Detection"
+              description="Final year college project. A combination of Hardware (Agrobots), AI (Image Recognization) and Microservices (Frontend, Backend and AI Models) to develop a PoC agrobot which can detects the plant disease on the go in realtime "
+              ghLink="https://github.com/ErKiran/Plant-Disease-Frontend-"
+              demoLink="https://agrohacks.netlify.app/"              
+            />
+          </Col>
+
+          <Col md={4} className="project-card">
+            <ProjectCard
+              imgPath={ManyMore}
+              isBlog={false}
+              title="And ManyMore......"
+              description="I love to develop useless stuffs on the free time so there are manymore on my github repo. If you wanna check"
+              ghLink="https://github.com/ErKiran"
             />
           </Col>
         </Row>

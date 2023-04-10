@@ -3,8 +3,14 @@ import { Container, Row, Col } from "react-bootstrap";
 import {
   AiFillGithub,
   AiOutlineTwitter,
-  AiFillInstagram,
+  AiOutlineMedium,
 } from "react-icons/ai";
+
+import {
+SiHackerrank,
+SiLeetcode,
+SiStackoverflow,
+} from "react-icons/si";
 import { FaLinkedinIn } from "react-icons/fa";
 
 function Footer() {
@@ -14,16 +20,16 @@ function Footer() {
     <Container fluid className="footer">
       <Row>
         <Col md="4" className="footer-copywright">
-          <h3>Designed and Developed by Soumyajit Behera</h3>
+          <h3>First, solve the problem. Then, write the code</h3>
         </Col>
         <Col md="4" className="footer-copywright">
-          <h3>Copyright © {year} SB</h3>
+          <h3>{year}</h3>
         </Col>
         <Col md="4" className="footer-body">
           <ul className="footer-icons">
             <li className="social-icons">
               <a
-                href="https://github.com/soumyajit4419"
+                href="https://github.com/ErKiran"
                 style={{ color: "white" }}
                 target="_blank" 
                 rel="noopener noreferrer"
@@ -33,7 +39,7 @@ function Footer() {
             </li>
             <li className="social-icons">
               <a
-                href="https://twitter.com/Soumyajit4419"
+                href="https://twitter.com/KiranAdhikariEr"
                 style={{ color: "white" }}
                 target="_blank" 
                 rel="noopener noreferrer"
@@ -43,7 +49,7 @@ function Footer() {
             </li>
             <li className="social-icons">
               <a
-                href="https://www.linkedin.com/in/soumyajit4419/"
+                href="https://www.linkedin.com/in/kiranadhikarier/"
                 style={{ color: "white" }}
                 target="_blank" 
                 rel="noopener noreferrer"
@@ -53,12 +59,43 @@ function Footer() {
             </li>
             <li className="social-icons">
               <a
-                href="https://www.instagram.com/soumyajit4419"
+                href="https://medium.com/@kiruu1238"
                 style={{ color: "white" }}
                 target="_blank" 
                 rel="noopener noreferrer"
               >
-                <AiFillInstagram />
+                <AiOutlineMedium />
+              </a>
+            </li>
+            <li className="social-icons">
+              <a
+                href="https://www.hackerrank.com/kiruu1238"
+                style={{ color: "white" }}
+                target="_blank" 
+                rel="noopener noreferrer"
+              >
+                <SiHackerrank />
+              </a>
+            </li>
+            <li className="social-icons">
+              <a
+                href="https://leetcode.com/ErKiran/"
+                style={{ color: "white" }}
+                target="_blank" 
+                rel="noopener noreferrer"
+              >
+                <SiLeetcode />
+              </a>
+            </li>
+
+            <li className="social-icons">
+              <a
+                href="https://stackoverflow.com/users/6414982/kiran-adhikari"
+                style={{ color: "white" }}
+                target="_blank" 
+                rel="noopener noreferrer"
+              >
+                <SiStackoverflow />
               </a>
             </li>
           </ul>
