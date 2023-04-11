@@ -408,7 +408,7 @@ button:focus {
   padding-bottom: 8px !important ;
 }
 .footer-copywright {
-  text-align: center !important;
+  text-align: right !important;
 }
 
 .footer-body {
@@ -416,9 +416,9 @@ button:focus {
   text-align: center !important;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 2500px) {
   .footer-copywright {
-    text-align: center !important;
+    text-align: right !important;
   }
 
   .footer-body {

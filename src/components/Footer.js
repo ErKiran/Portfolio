@@ -1,5 +1,7 @@
-import React from "react";
+import React, {useEffect, useState} from "react";
 import { Container, Row, Col } from "react-bootstrap";
+import { useLocation } from 'react-router-dom';
+import  Quotes  from "../Assets/quotes/data.json"
 import {
   AiFillGithub,
   AiOutlineTwitter,
@@ -12,18 +14,26 @@ SiLeetcode,
 SiStackoverflow,
 } from "react-icons/si";
 import { FaLinkedinIn } from "react-icons/fa";
-
 function Footer() {
-  let date = new Date();
-  let year = date.getFullYear();
+  const [quote, setQuote] = useState({});
+  const fetchNewQuote = () => {
+    // Get a random quote from the Quotes array
+    const randomIndex = Math.floor(Math.random() * Quotes.length);
+    const randomQuote = Quotes[randomIndex];
+
+    // Set the new quote as the state
+    setQuote(randomQuote);
+  }
+  const location = useLocation();
+  useEffect(() => {
+    fetchNewQuote();
+  }, [location.pathname]); // Reload the footer component when the pathname changes
+
   return (
     <Container fluid className="footer">
       <Row>
         <Col md="4" className="footer-copywright">
-          <h3>First, solve the problem. Then, write the code</h3>
-        </Col>
-        <Col md="4" className="footer-copywright">
-          <h3>{year}</h3>
+          <h3>&lt;{quote.quote}/&gt; - "{quote.author}"</h3>
         </Col>
         <Col md="4" className="footer-body">
           <ul className="footer-icons">
